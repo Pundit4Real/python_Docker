@@ -1,0 +1,32 @@
+# Part 1: Starting up with Docker
+
+# Build a Docker image with the tag "python-django"
+docker build --tag python-django .
+
+# Run a container from the "python-django" image, publishing port 8000 on the host to port 8000 in the container
+docker run --publish 800:8000 python-django
+
+# Part 2: Creating a new Django project using Docker Compose
+
+# Build the Docker Compose services defined in the docker-compose.yml file
+docker-compose build
+
+# Run a one-off command to create a new Django project named "core" using docker-compose
+docker-compose run --rm app django-admin startproject core .
+
+# Start up the Docker Compose services defined in the docker-compose.yml file
+docker-compose up
+
+# Part 3: Additional Docker Compose commands
+
+# Rebuild the Docker Compose services
+docker-compose build
+
+# Run a one-off command to create a new Django project named "core" using docker-compose (optional, if needed again)
+docker-compose run --rm app django-admin startproject core .
+
+# Start up the Docker Compose services
+docker-compose up
+
+# Enter into a running container named "django_app" with an interactive terminal session
+docker exec -it django_app /bin/bash

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker with Python</title>
+    <style>
+        @keyframes move {
+            0% { transform: translateX(100%); } /* Start from the right side of the screen */
+            100% { transform: translateX(-100%); } /* End at the left side of the screen */
+        }
+
+        .movable-image {
+            position: absolute;
+            top: 10%;
+            right: 0; /* Start from the right side of the screen */
+            transform: translate(50%, -50%);
+            animation: move 60s linear infinite; /* Adjust the duration as needed */
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="" direction="right">
+        <h2>Python and Docker Practice</h2>
+    </marquee>
+    <img class="movable-image" src="https://learn.microsoft.com/en-us/azure/developer/python/media/tutorial-container-web-app/containerization-of-python-apps-run-local.png" width="700" height="500" alt="Docker-python">
+</body>
+</html>
